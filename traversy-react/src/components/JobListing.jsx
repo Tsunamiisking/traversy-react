@@ -15,7 +15,7 @@ const JobListing = ({job}) => {
               {job.description}
             </div>
 
-            <h3 className="text-indigo-500 mb-2">{`${job.salary} / Year`}</h3>
+            <h3 className="text-indigo-500 mb-2">{job.salary} / Year </h3>
 
             <div className="border border-gray-100 mb-5"></div>
 
