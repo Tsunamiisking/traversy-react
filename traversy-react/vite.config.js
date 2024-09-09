@@ -6,9 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    // Configured to help API fetch 
+    // Creating a placeholder or variable for the API link
+    // So on subsequest API requests '/api is used instead of the API link'
     proxy: {
       "/api": {
-        target: "http://localhost:8000",
+        target: "http://localhost:8000", // Api link
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
