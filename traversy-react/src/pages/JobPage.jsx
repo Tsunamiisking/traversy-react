@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Spinner from '../components/Spinner';
 
 const JobPage = () => {
     const {id} = useParams();
@@ -9,7 +10,7 @@ const JobPage = () => {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-              const apiUrl = isHome ? '/api/Jobs' : '/api/Jobs?_limit=3'
+              const apiUrl = `/api/jobs/${id}`
               const res = await fetch(apiUrl);
               const data = await res.json();
               setJobs(data);
@@ -21,10 +22,7 @@ const JobPage = () => {
           };
           fetchJobs();
         }, []);
-  return (
-    <div>
-      
-    </div>
+  return ( loading ? <Spinner /> : <h1>{job.title}</h1>
   )
 }
 
