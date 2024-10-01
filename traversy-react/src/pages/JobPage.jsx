@@ -21,7 +21,7 @@ const JobPage = () => {
       }
     };
     fetchJobs();
-  },);
+  }, []);
 
   return loading ? (
     <Spinner />

@@ -19,7 +19,7 @@ const JobListings = ({ isHome = false }) => {
         setJobs(data);
       } catch (error) {
         conosle.log("Error: ", error);
-      } finally {
+      } finally { 
         setLoading(false);
       }
     };
