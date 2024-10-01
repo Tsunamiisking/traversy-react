@@ -10,7 +10,7 @@ const JobPage = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const apiUrl = `api/Jobs/${id}`;  
+        const apiUrl = `/api/Jobs/${id}`;  
         const res = await fetch(apiUrl);
         const data = await res.json();
         setJob(data);
@@ -21,12 +21,12 @@ const JobPage = () => {
       }
     };
     fetchJobs();
-  }, [id]);
+  },);
 
   return loading ? (
     <Spinner />
   ) : (
-    <h1>{job.title}</h1>
+     <h1>{job.title}</h1>
   );
 };
 
