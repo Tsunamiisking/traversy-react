@@ -4,30 +4,35 @@ import Spinner from "../components/Spinner";
 
 const JobPage = () => {
   const { id } = useParams();
-  const [job, setJob] = useState([]);
-  const [loading, setLoading] = useState(true); 
 
-  useEffect(() => {
-    const fetchJobs = async () => {
-      try {
-        const apiUrl = `/api/Jobs/${id}`;  
-        const res = await fetch(apiUrl);
-        const data = await res.json();
-        setJob(data);
-      } catch (error) {
-        console.log("Error: ", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchJobs();
-  }, []);
+  // Using useEffect to request jobs data
 
-  return loading ? (
-    <Spinner />
-  ) : (
-     <h1>{job.title}</h1>
-  );
+  // const [job, setJob] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   const fetchJobs = async () => {
+  //     try {
+  //       const apiUrl = `/api/Jobs/${id}`;
+  //       const res = await fetch(apiUrl);
+  //       const data = await res.json();
+  //       setJob(data);
+  //     } catch (error) {
+  //       console.log("Error: ", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchJobs();
+  // }, []);
+
+  return loading ? <Spinner /> : <h1>{job.title}</h1>;
 };
 
-export default JobPage;
+const jobLoader = async ({}) => {
+  const apiUrl = `/api/Jobs/${params.id}`;
+  const res = await fetch(apiUrl);
+  const data = await res.json();
+  return data;
+};
+
+export {JobPage as default, jobLoader};
