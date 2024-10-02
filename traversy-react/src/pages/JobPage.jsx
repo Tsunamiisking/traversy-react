@@ -4,7 +4,7 @@ import Spinner from "../components/Spinner";
 
 const JobPage = () => {
   const { id } = useParams();
-  const job = useLoaderData;
+  const job = useLoaderData();
 
   // Using useEffect to request jobs data
 
