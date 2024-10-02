@@ -4,6 +4,7 @@ import Spinner from "../components/Spinner";
 
 const JobPage = () => {
   const { id } = useParams();
+  const job = useLoaderData;
 
   // Using useEffect to request jobs data
 
@@ -25,10 +26,10 @@ const JobPage = () => {
   //   fetchJobs();
   // }, []);
 
-  return loading ? <Spinner /> : <h1>{job.title}</h1>;
+  return <h1>{job.title}</h1>;
 };
 
-const jobLoader = async ({}) => {
+const jobLoader = async ({ params }) => {
   const apiUrl = `/api/Jobs/${params.id}`;
   const res = await fetch(apiUrl);
   const data = await res.json();
