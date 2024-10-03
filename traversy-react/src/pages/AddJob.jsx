@@ -1,6 +1,16 @@
 import React from "react";
+import { useState } from "react";
 
 const AddJob = () => {
+  const [title, setTitle] = useState("");
+  const [type, setType] = useState("Full-Time");
+  const [location, setLocation] = useState("");
+  const [description, setDescription] = useState("");
+  const [salary, setSalary] = useState("Under $50K");
+  const [companyName, setCompanyName] = useState("");
+  const [companyDescription, setCompanyDescription] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactPhone, setContactPhone] = useState("");
   return (
     <section className="bg-indigo-50">
       <div className="container m-auto max-w-2xl py-24">
@@ -9,7 +19,10 @@ const AddJob = () => {
             <h2 className="text-3xl text-center font-semibold mb-6">Add Job</h2>
 
             <div className="mb-4">
-              <label for="type" className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="type"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Job Type
               </label>
               <select
@@ -40,7 +53,7 @@ const AddJob = () => {
             </div>
             <div className="mb-4">
               <label
-                for="description"
+                htmlFor="description"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Description
@@ -55,7 +68,10 @@ const AddJob = () => {
             </div>
 
             <div className="mb-4">
-              <label for="type" className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="type"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Salary
               </label>
               <select
@@ -79,7 +95,9 @@ const AddJob = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2">Location</label>
+              <label className="block text-gray-700 font-bold mb-2">
+                Location
+              </label>
               <input
                 type="text"
                 id="location"
@@ -93,7 +111,10 @@ const AddJob = () => {
             <h3 className="text-2xl mb-5">Company Info</h3>
 
             <div className="mb-4">
-              <label for="company" className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="company"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Company Name
               </label>
               <input
@@ -107,7 +128,7 @@ const AddJob = () => {
 
             <div className="mb-4">
               <label
-                for="company_description"
+                htmlFor="company_description"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Company Description
@@ -123,7 +144,7 @@ const AddJob = () => {
 
             <div className="mb-4">
               <label
-                for="contact_email"
+                htmlFor="contact_email"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Contact Email
@@ -139,7 +160,7 @@ const AddJob = () => {
             </div>
             <div className="mb-4">
               <label
-                for="contact_phone"
+                htmlFor="contact_phone"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Contact Phone
