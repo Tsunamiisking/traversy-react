@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "e95a",
-      "type": "Full-Time",
-      "title": "Test",
-      "location": "Nigeria",
-      "description": "Testing Testing Testing Testing Testing Testing Testing Testing",
-      "salary": "Under $50K",
-      "company": {
-        "name": "SpaCity",
-        "description": "Testing Testing Testing Testing Testing Testing",
-        "contactEmail": "allenissabigboi@gmail.com",
-        "contactPhone": "+2348101502547"
-      }
     }
   ]
 }

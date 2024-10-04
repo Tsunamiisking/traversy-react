@@ -22,13 +22,16 @@ const App = () => {
       },
       body: JSON.stringify(newJob),
     });
-    console.log(newJob);
+    // console.log(newJob);
     return;
   };
   
   // Delete Job
-  const deleteJob = async ( id )=> {
-    
+  const deleteJob = async ( jobId )=> {
+    const res = await fetch(`/api/Jobs/${jobId}`, {
+      method: "DELETE",
+    });
+    return;
   }
 
 
